@@ -1,20 +1,22 @@
-// const express=require('express')
+// const express = require("express");
 
-// const app=express()
+// const app = express();
 
-// app.get("/", (req, res)=>{
-//     res.send("welcome")
-// })
+// app.get("/", (req, res) => {
+//   res.send("welcome");
+// });
 
 // app.get("/home", (req, res) => {
-
-// res.send("Nice to meet you buddy  are")
-
-// })
+//   res.send("Nice to meet you buddy  are");
+// });
 
 // Port = 5000;
 
-// app.listen(Port, console.log(`Server is running on ${Port}`))
+// app.listen(Port, console.log(`Server is running on ${Port}`));
+
+
+
+
 
 // ___________________________________________________________________________________________________________
 
@@ -54,23 +56,30 @@
 
 // ______________________________________________________________________________________________ middleware external/
 
-const express = require("express");
-const token = require("./Token");
-const validation = require("./Validation");
+// const express = require("express");
+// const token = require("./Token");
+// const validation = require("./Validation");
+
+// const app = express();
+// const Middleware=[token,validation]
+
+// app.get("/",Middleware, (req, res) => {
+//   console.log("Login success");
+//   res.send("Welcome buddy");
+
+// });
+
+// const port = 8000;
+// app.listen(port, () => console.log(`Server running on port ${port}`));
 
 
 
-const app = express();
-const Middleware=[token,validation]
+// -----------------------------------------------------------------------
 
-
-app.get("/",Middleware, (req, res) => {
-  console.log("Login success");
-  res.send("Welcome buddy");
-  
-  
-  
-});
-
-const port = 8000;
-app.listen(port, () => console.log(`Server running on port ${port}`));
+const express=require("express");
+const router = require("./Router/TestRouter");
+const app1=express();
+app1.use(express.json())
+app1.use('/',router)
+port =4000;
+app1.listen(port,console.log(`sever running on port: ${port}`))
