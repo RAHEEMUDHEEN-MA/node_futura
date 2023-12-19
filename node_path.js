@@ -1,0 +1,6 @@
+const Path=require('path')
+// console.log(Path)
+// console.log(__dirname)
+// console.log(Path.basename(__filename))
+// console.log(Path.extname(__filename))
+// console.log(Path.parse(__filename))
